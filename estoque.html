@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestão PlugoBr</title>
+</head>
+<style>
+     
+    div{
+        margin: auto;
+        width: 563px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <nav>
+        <a href="vendas.html" target="_self">Vendas</a>
+        <a href="#">Entradas</a>
+        <a href="#">Saidas</a>
+        <a href="#">Finanças</a>
+        <a href="estoque.html" >Estoque</a>
+    </nav>
+    <main>
+        
+       <table>
+        
+        <caption>Estoque PlugoBr 11/05/2023</caption>
+        <tr>
+            <th>Produto</th>
+            <th>Custo</th>
+            <th>Valor de Venda</th>
+            <th>Lucro</th>
+            <th>Fornecedor</th>
+            <th>Estoque</th>
+            <th>Futuro</th>
+        </tr>
+        <tr>
+            <td>Fone F9</td>
+            <td>R$ 39,00</td>
+            <td>R$ 80,00</td>
+            <td class="lucro_100">100%</td>
+            <td>Bestshop3.br</td>
+            <td>0UN</td>
+            <td>4UN</td>
+        </tr>
+        <tr>
+            <td>Ventilador portatil</td>
+            <td>R$ 14,49</td>
+            <td>R$ 28,98</td>
+            <td class="lucro_100">100%</td>
+            <td>Smarkpanda</td>
+            <td>1UN</td>
+            <td>Sem Previsão</td>
+        </tr>
+        <tr>
+            <td>Fone TWS</td>
+            <td>R$ 17,00</td>
+            <td>R$ 34,00</td>
+            <td class="lucro_100">100%</td>
+            <td>Y68/T500</td>
+            <td>4UN</td>
+            <td>Sem Previsão</td>
+        </tr>
+        <tr>
+            <td>Fone TWS Pro</td>
+            <td>R$ 21,99</td>
+            <td>R$ 44,90</td>
+            <td class="lucro_100">100%</td>
+            <td>D.H Digital Store.br</td>
+            <td>2UN</td>
+            <td>Sem Previsão</td>
+        </tr>
+        <tr>
+            <td>Relogio Digital</td>
+            <td>R$ 6,90</td>
+            <td>R$ 13,90</td>
+            <td class="lucro_100">100%</td>
+            <td>Jungle Acessorios</td>
+            <td>2UN</td>
+            <td>Sem Previsão</td>
+        </tr>
+         
+       </table> 
+
+        
+       <div id="Calculadora">
+        <h1>Calcular 100% de Lucro</h1>
+            <label for="precoCusto">Preço de Custo:</label> <br>
+        
+            <input type="number" id="precoCusto" step="0.01"><br>
+        
+            <button onclick="calcularPrecoVenda()">Calcular</button>
+            
+            <p id="precoVenda"></p>
+        </div>
+
+        <script>
+        function calcularPrecoVenda() {
+        let precoCusto = parseFloat(document.getElementById("precoCusto").value);
+        let precoVenda = precoCusto * 2;
+        document.getElementById("precoVenda").textContent = "O preço da venda com 100% de lucro deverá ser: " + precoVenda.toFixed(2);
+        }
+        </script>
+    </main>
+
+   
+     
+
+     
+      
+    
+</body>
+</html>

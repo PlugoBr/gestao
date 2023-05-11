@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Preço de Venda</title>
+    <script>
+        function calcularPrecoVenda() {
+            let precoCusto = parseFloat(document.getElementById("precoCusto").value);
+            let precoVenda = precoCusto * 2;
+            document.getElementById("precoVenda").textContent = "O preço de venda com 100% de lucro é: " + precoVenda.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Preço de Venda</h1>
+    <label for="precoCusto">Preço de Custo:</label>
+    <input type="number" id="precoCusto" step="0.01">
+    <button onclick="calcularPrecoVenda()">Calcular</button>
+    <p id="precoVenda"></p>
+</body>
+</html>
