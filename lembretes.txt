@@ -1,0 +1,4 @@
+-Adicionar calculadora de desconto na aba finanças!
+-Adicionar aba de "A receber"
+-Adicionar aba de "Documentos"
+

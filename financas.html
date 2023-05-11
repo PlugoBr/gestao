@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     
+    <title>Document</title>
+</head>
+<style>
+    .calc{
+        background-color: white;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 331px;
+        height: 200px;
+        text-align: center;
+        margin-right: 10px;
+        
+        
+    }
+    #calculos{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    main{
+        display: block;
+        background-color: rgb(253, 253, 253);
+        width: 800px;
+        height: auto;
+        margin: auto;
+        border: 1px solid black;
+    }
+    h1{
+        font-size: medium;
+        font-family: 'Secular One', sans-serif;
+    }
+     
+</style>
+<body>
+    <nav>
+        <a href="vendas.html" target="_self">Vendas</a>
+        <a href="entradas.html">Entradas</a>
+        <a href="saidas.html">Saidas</a>
+        <a href="financas.html">Finanças</a>
+        <a href="estoque.html">Estoque</a>
+    </nav>
+    <main>
+        <table>
+          <tr>
+            <th>Mês</th>
+            <th>Entradas</th>
+            <th>Saidas</th>
+            <th>Vendas</th>
+            <th>Planilhas</th>
+          </tr>
+          <tr>
+            <td>Novembro</td>
+            <td>R$ 350,00</td>
+            <td>R$ 189,93</td>
+            <td>6</td>
+            <td><a href="planilhas/Fechamento novembro.rar">⬇️</a></td>
+          </tr>
+          <tr>
+            <td>Dezembro</td>
+            <td>R$ 60,00</td>
+            <td>R$ 109,36</td>
+            <td>7</td>
+            <td><a href="planilhas/Fechamento Dezembro.rar">⬇️</a></td>
+          </tr>
+          <tr>
+            <td>Fevereiro</td>
+            <td>R$ 208,98</td>
+            <td>R$ 161,60</td>
+            <td>11</td>
+            <td><a href="planilhas/Fechamento Fevereiro 2023.rar">⬇️</a></td>
+          </tr>
+          <tr>
+            <td>Janeiro</td>
+            <td>R$ 110,00</td>
+            <td>R$ 65,97</td>
+            <td>4</td>
+            <td><a href="planilhas/fechamento janeiro 2023.rar">⬇️</a></td>
+          </tr>
+        </table>
+    </main>
+    <SECTION id="calculos">
+        <div class="calc">
+            <h1>Calculadora de Preço de Venda</h1>
+            <label for="precoCusto">Preço de Custo:</label><br>
+            <input type="number" id="precoCusto" step="0.01"><br>
+            <label for="percentagemLucro">Porcentagem de Lucro:</label><br>
+            <select id="percentagemLucro">
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+                <option value="80">80%</option>
+                <option value="90">90%</option>
+                <option value="100">100%</option>
+            </select>
+            <button onclick="calcularPrecoVenda()">Calcular</button>
+            <p id="precoVenda"></p>
+        </div><br>
+
+        <div class="calc"> 
+            <h1>Calculadora de Desconto</h1>
+            <label for="precoOriginal">Preço Original:</label><br>
+            <input type="number" id="precoOriginal" step="0.01"><br>
+            <label for="percentagemDesconto">Porcentagem de Desconto:</label><br>
+            <select id="percentagemDesconto">
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+            </select>
+            <button onclick="calcularDesconto()">Calcular</button>
+            <p id="precoComDesconto"></p>
+        </div><br>
+
+
+        <!-- <div class="calc">
+            <h1>Calculadora de Preço de Venda</h1>
+            <label for="precoCusto">Preço de Custo:</label><br>
+            <input type="number" id="precoCusto" step="0.01"><br>
+            <label for="percentagemLucro">Porcentagem de Lucro:</label><br>
+            <select id="percentagemLucro">
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+                <option value="80">80%</option>
+                <option value="90">90%</option>
+                <option value="100">100%</option>
+            </select>
+            <button onclick="calcularPrecoVenda()">Calcular</button>
+            <p id="precoVenda"></p>
+        </div> <br> -->
+    </SECTION>
+   
+   
+</body>
+    <script>
+        function calcularPrecoVenda() {
+            let precoCusto = parseFloat(document.getElementById("precoCusto").value);
+            let percentagemLucro = parseInt(document.getElementById("percentagemLucro").value);
+            let precoVenda = precoCusto * (1 + percentagemLucro / 100);
+            document.getElementById("precoVenda").textContent = "O preço de venda com " + percentagemLucro + "% de lucro é: " + precoVenda.toFixed(2);
+        }
+    </script>
+
+
+
+    <title>Calculadora de Desconto</title>
+    <script>
+        function calcularDesconto() {
+            let precoOriginal = parseFloat(document.getElementById("precoOriginal").value);
+            let percentagemDesconto = parseInt(document.getElementById("percentagemDesconto").value);
+            let valorDesconto = precoOriginal * (percentagemDesconto / 100);
+            let precoComDesconto = precoOriginal - valorDesconto;
+            document.getElementById("precoComDesconto").textContent = "O preço com desconto é: " + precoComDesconto.toFixed(2);
+        }
+    </script>
+ </html>
+
+ 
