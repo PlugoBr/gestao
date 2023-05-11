@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Finanças Plugo</title>
+</head>
+<style>
+    div{
+        background-color: rgb(255, 0, 0);
+        text-align: center;
+        width: 300px;
+        height: 200px;
+        margin-right: 100px;
+        
+        
+    }
+    section{
+        display: flex;
+        background-color: white;
+        width: auto;
+        height: auto;
+        margin: auto;
+        text-align: center;
+    }
+    h1{
+    font-family: 'Secular One', sans-serif;
+    font-size: medium;
+    }
+
+</style>
+<body>
+    <section >
+        
+            <div>
+                <h1>Calculadora de Preço de Venda</h1>
+                <label for="precoCusto">Preço de Custo:</label><br>
+                <input type="number" id="precoCusto" step="0.01"><br>
+                <label for="percentagemLucro">Porcentagem de Lucro:</label><br>
+                <select id="percentagemLucro">
+                    <option value="10">10%</option>
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                    <option value="40">40%</option>
+                    <option value="50">50%</option>
+                    <option value="60">60%</option>
+                    <option value="70">70%</option>
+                    <option value="80">80%</option>
+                    <option value="90">90%</option>
+                    <option value="100">100%</option>
+                </select>
+                <button onclick="calcularPrecoVenda()">Calcular</button>
+                <p id="precoVenda"></p>
+            </div>
+            <div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore enim optio maxime earum ipsum, excepturi alias natus. Pariatur praesentium placeat, quisquam aut est eos laboriosam sunt cupiditate, reprehenderit vitae aperiam!
+            </div>
+
+            <div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum molestias necessitatibus magnam maiores explicabo consequatur! Harum maiores labore fugiat provident repellat facilis dicta. Excepturi nulla quia necessitatibus neque esse a?
+            </div>
+    </section>
+</body>
+
+<title>Calculadora de Preço de Venda</title>
+    <script>
+        function calcularPrecoVenda() {
+            let precoCusto = parseFloat(document.getElementById("precoCusto").value);
+            let percentagemLucro = parseInt(document.getElementById("percentagemLucro").value);
+            let precoVenda = precoCusto * (1 + percentagemLucro / 100);
+            document.getElementById("precoVenda").textContent = "O preço de venda com " + percentagemLucro + "% de lucro é: " + precoVenda.toFixed(2);
+        }
+    </script>
+
+</html>
