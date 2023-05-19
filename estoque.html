@@ -8,11 +8,16 @@
     <title>Gestão PlugoBr</title>
 </head>
 <style>
-     
+     main{
+        font-size: 15px;
+     }
     div{
         margin: auto;
         width: 563px;
         border: 1px solid black;
+    }
+    table{
+        overflow: scroll;
     }
 </style>
 <body>
@@ -86,24 +91,9 @@
        </table> 
 
         
-       <div id="Calculadora">
-        <h1>Calcular 100% de Lucro</h1>
-            <label for="precoCusto">Preço de Custo:</label> <br>
         
-            <input type="number" id="precoCusto" step="0.01"><br>
-        
-            <button onclick="calcularPrecoVenda()">Calcular</button>
-            
-            <p id="precoVenda"></p>
-        </div>
 
-        <script>
-        function calcularPrecoVenda() {
-        let precoCusto = parseFloat(document.getElementById("precoCusto").value);
-        let precoVenda = precoCusto * 2;
-        document.getElementById("precoVenda").textContent = "O preço da venda com 100% de lucro deverá ser: " + precoVenda.toFixed(2);
-        }
-        </script>
+         
     </main>
 
    
