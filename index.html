@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Logo png.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Gestão</title>
 </head>
@@ -16,7 +17,7 @@
 
         
     }
-    #saudacao{
+    #status{
         font-size: 20px;
         color: rgb(26, 113, 245);
         background-color: black;
@@ -35,29 +36,17 @@
         text-align: justify;
         background-color: darkgray;
         border-radius: 10px;
-
+        
         
     }
-    ul{
-        border: 1px solid black;
-        background-color: rgb(26 113 245);
-        max-width: 600px;
-        height: 300px;
-        margin: auto;
-        
-        columns: 2;
-        list-style-type: '\✔️\00A0\00A0';
-        color: black;
-        font-weight: bold;
-    }
-    
-      
-
 
     
+
 </style>
 <body>
+    <img src="imagens/Logo png.png" alt="" class="logo">
     <nav>
+        
         <a href="index.html">Status</a>
         <a href="vendas.html">Vendas</a>
         <a href="entradas.html">Entradas</a>
@@ -67,17 +56,29 @@
     </nav>
     <main>
         
+              
         
          <div id="saud">
-             <h1 id="saudacao">Status</h1>
-              <ul>
-                <li>Saldo Atual: R$372,55</li>
-                <li>Ultima Atualização: 29/05/2023</li>
-                <li>Vendas: 2</li>
-                <li>Trocas: 0</li>
-                <li>Entradas: R$ 0.00</li>
-                <li>Saidas: R$ 153,57 </li>
-              </ul>
+             <table>
+                <caption id="status">Status Geral</caption>
+                <tr>
+                    <th>Saldo</th>
+                    <th>Ultima Atualização</th>
+                    <th>Vendas</th>
+                    <th>Trocas</th>
+                    <th>Entradas</th>
+                    <th>Saidas</th>
+                </tr>
+                <tr>
+                    <td>372,54</td>
+                    <td>30/05/2023</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>R$ 0,00</td>
+                    <td>R$ 153,57</td>
+                </tr>
+                
+             </table>
             </div>
     </main>
     

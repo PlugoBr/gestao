@@ -25,19 +25,18 @@ main{
 }
 nav{
     background-color: rgb(0, 0, 0);
-    border: 1px solid #595757cc;
     margin-right: 10px;
     height: 17px;
-    width: 494px;
+    width: 594px;
     border-radius: 9px;
     padding: 6px;
     text-align: center;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 19px;
     margin-bottom: 10px;
     
    
-   
+
 }
  nav > a{
   text-decoration: none;
@@ -49,6 +48,7 @@ nav{
  }
  nav > a:hover{
   text-decoration: underline;
+  color: rgb(26 113 245);
 
  }
 
@@ -117,7 +117,14 @@ nav{
   align-items: center;
   justify-content: space-around;
  }
- 
+ .logo{
+  height: 63px;
+  width: 62px;
+  
+}
+margin-top: 0px;
+  margin-left: 308px;
+  margin-bottom: -71px;
 
  
  
