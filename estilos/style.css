@@ -11,7 +11,7 @@
   
 }
 body{
-    background-image: linear-gradient(to left, #020540, #0d0d0d);
+    background-color: aqua;
     font-family: var(---principal);
 }
 main{
