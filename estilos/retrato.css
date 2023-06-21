@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-
+main{
+    max-width: 450px;
+}
 nav{
     max-width: 450px;
 }
