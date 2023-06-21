@@ -17,6 +17,7 @@ body{
 main{
   background-color: white;
   max-width: 800px;
+  min-width: 450px;
   margin: auto;
   text-align: center;
   padding: 10px;
