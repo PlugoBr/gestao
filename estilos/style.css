@@ -71,13 +71,16 @@ nav{
   margin-top: 20px;
   margin-bottom: 10px;
  }
- #pago,#atrasado,#pendente{
-  width: 20px;
-  height: 20px;
+ #pago,#atrasado,#pendente,#devolucao{
+  width: 32px;
+  height: 16px;
   margin-right: 5px;
   border-radius: 12px;
   
   
+ }
+ #devolucao{
+  background-color: rgb(82, 10, 150);
  }
  #pago{
   background-color: chartreuse;
@@ -89,6 +92,10 @@ nav{
   background-color: red;
  }
 
+ .devolucao{
+  background-color: rgb(82, 10, 150);
+  color: white;
+ }
  .pago{
   background-color: chartreuse;
  }
@@ -113,7 +120,7 @@ nav{
  }
  #situacao{
   display: flex;
-  max-width: 266px; 
+  max-width: 333px; 
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
